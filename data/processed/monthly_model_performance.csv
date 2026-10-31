@@ -1,0 +1,4 @@
+Model,MAE,RMSE,Months evaluated
+Persistence,3.77,9.777,173
+SARIMAX,14.175,15.947,173
+SARIMA,15.029,16.582,173

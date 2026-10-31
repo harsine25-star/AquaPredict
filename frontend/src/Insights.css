@@ -1,0 +1,207 @@
+
+.insights-page {
+  display: grid;
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.insight-card {
+  background: var(--panel, #ffffff);
+  border: 1px solid #e3eaf2;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 5px 18px rgba(28, 53, 87, 0.05);
+  min-width: 0;
+}
+
+.insight-eyebrow {
+  color: #1682c4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin: 0 0 8px;
+}
+
+.insight-card h2 {
+  margin: 0 0 14px;
+  color: var(--text, #172b4d);
+}
+
+.insight-card p {
+  color: var(--muted, #64748b);
+  line-height: 1.65;
+}
+
+.score-layout {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-top: 20px;
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 10px solid #d9f1ff;
+  outline: 3px solid #2589c9;
+  outline-offset: -13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #1479b8;
+}
+
+.score-circle strong {
+  font-size: 38px;
+}
+
+.score-circle span {
+  font-size: 12px;
+}
+
+.monthly-chart {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 10px;
+  height: 240px;
+  padding: 18px 8px 0;
+  overflow-x: auto;
+}
+
+.month-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  min-width: 30px;
+}
+
+.month-column strong,
+.month-column span {
+  font-size: 11px;
+  color: var(--muted, #64748b);
+}
+
+.month-track {
+  width: 100%;
+  height: 155px;
+  background: #edf3f8;
+  border-radius: 7px 7px 0 0;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.month-fill {
+  width: 100%;
+  background: linear-gradient(180deg, #54c3e8, #1679c5);
+  border-radius: 6px 6px 0 0;
+  transition: height 0.3s ease;
+}
+
+.trend-summary,
+.risk-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.trend-summary > div,
+.risk-details > div {
+  background: #f5f8fc;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.trend-summary span,
+.risk-details span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.trend-summary strong,
+.risk-details strong {
+  color: #183451;
+  overflow-wrap: anywhere;
+}
+
+.risk-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 18px 0;
+}
+
+.risk-banner span {
+  font-size: 13px;
+}
+
+.risk-banner h3 {
+  margin: 6px 0 0;
+  font-size: 24px;
+}
+
+.risk-value {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.risk-low {
+  background: #e7f8ee;
+  color: #167443;
+}
+
+.risk-moderate {
+  background: #fff4d8;
+  color: #8b5b00;
+}
+
+.risk-high {
+  background: #ffebeb;
+  color: #b42318;
+}
+
+.risk-unknown {
+  background: #eef2f7;
+  color: #475569;
+}
+
+.insight-note {
+  font-size: 12px;
+  border-top: 1px solid #e7edf4;
+  padding-top: 12px;
+  margin-top: 18px;
+}
+
+@media (max-width: 700px) {
+  .insight-card {
+    padding: 16px;
+  }
+
+  .score-layout {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .trend-summary,
+  .risk-details {
+    grid-template-columns: 1fr;
+  }
+
+  .monthly-chart {
+    grid-template-columns: repeat(12, 38px);
+    justify-content: start;
+  }
+}
